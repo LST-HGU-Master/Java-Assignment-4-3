@@ -1,14 +1,18 @@
-# Autograding Example: Java
-This example project is written in Java, and tested with Gradle/JUnit.
+# 課題 4-3: 多次元配列
 
-### The assignment
-The tests are currently failing because of an output mismatch. Fixing the `System.out.println` in the main method will make the tests green.
+### 課題の説明
+N x M（最大で9 x 9）の2次元配列を作成し、i行目 x j列目に i x j の計算結果を保存して表示するプログラムを作成せよ。
+ただしi, jは（0, 1, 2 ...）とし、数値の表示は`System.out.printf()`を使って3桁右詰めで行うこと。また次元数N, Mは実行時パラメータで与えること。
 
-### Setup command
-N/A
-
-### Run command
-`gradle test`
-
-### Notes
-- The JDK is installed on GitHub Actions machines, so you're also able to directly invoke `javac`, `java`, or any other CLI command included in the JDK. 
+### 実行例（N = 9, M = 8の場合）
+```
+  0  0  0  0  0  0  0  0
+  0  1  2  3  4  5  6  7
+  0  2  4  6  8 10 12 14
+  0  3  6  9 12 15 18 21
+  0  4  8 12 16 20 24 28
+  0  5 10 15 20 25 30 35
+  0  6 12 18 24 30 36 42
+  0  7 14 21 28 35 42 49
+  0  8 16 24 32 40 48 56
+```
