@@ -41,7 +41,7 @@ public class Prog43Test {
             Prog43.main(new String[]{"7", "8"});
         // assertion
             String[] prints = bos.toString().split(System.lineSeparator());
-            assertEquals(7, prints.length,"実行時の第１パラメータの値から期待されるものと結果（縦の行数）が一致しません[A]!");
+            assertEquals(7, prints.length,"実行時の第１引数から期待される結果と実際の結果（縦の行数）が一致しません[A]!");
 
         // action
             bos = new ByteArrayOutputStream();   // 二度めのmain実行に向けて出力先を再調整
@@ -49,7 +49,7 @@ public class Prog43Test {
             Prog43.main(new String[]{"5", "6"});
         // assertion
             prints = bos.toString().split(System.lineSeparator());
-            assertEquals(5, prints.length,"実行時の第１パラメータの値から期待されるものと結果（縦の行数）が一致しません[B]!");
+            assertEquals(5, prints.length,"実行時の第１引数から期待される結果と実際の結果（縦の行数）が一致しません[B]!");
         } catch (AssertionError err) {
             after();
             throw err;
@@ -67,7 +67,7 @@ public class Prog43Test {
             Prog43.main(new String[]{"7", "8"});
         // assertion
             String[] prints = bos.toString().split(System.lineSeparator());
-            assertEquals(8 * 3, prints[0].length(),"実行時の第２パラメータの値から期待されるものとその結果（スペース文字を含めた横方向の文字数）が一致しません[A]!");
+            assertEquals(8 * 3, prints[0].length(),"実行時の第２引数から期待される結果と実際の結果（スペース文字を含めた横方向の文字数）が一致しません[A]!");
 
         // action
             bos = new ByteArrayOutputStream();   // 二度めのmain実行に向けて出力先を再調整
@@ -75,7 +75,7 @@ public class Prog43Test {
             Prog43.main(new String[]{"5", "6"});
         // assertion
             prints = bos.toString().split(System.lineSeparator());
-            assertEquals(6 * 3, prints[0].length(),"実行時の第２パラメータの値から期待されるものとその結果（スペース文字を含めた横方向の文字数）が一致しません[B]!");
+            assertEquals(6 * 3, prints[0].length(),"実行時の第２引数から期待される結果と実際の結果（スペース文字を含めた横方向の文字数）が一致しません[B]!");
         } catch (AssertionError err) {
             after();
             throw err;
@@ -116,7 +116,7 @@ public class Prog43Test {
         };
         String[] prints = bos.toString().split(System.lineSeparator());
         String msg1 = "print結果の";
-        String msg2 = "行目が期待したものと異なります!";
+        String msg2 = "行目が期待した結果と異なります!";
         try {
             assertEquals(expected1[0], prints[0], msg1 + 1 + msg2);
             assertEquals(expected1[1], prints[1], msg1 + 2 + msg2);
